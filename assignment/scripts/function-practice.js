@@ -17,7 +17,7 @@ function helloName(name) {
   //in this case, we have a parameter called 'name'
   //return the hello message and use the parameter
   // return 'Hello, ' + name + '!';
-  return `My name is, ${name}`;
+  return `Hello, ${name}!`;
 
 }
 // Remember to call the function to test
@@ -82,24 +82,30 @@ console.log('The last item in the array is:', getLast(array));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(array, value) {
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 1; i < array.length; i++) {
     console.log('array value at i', array[i]);
-    if (array[i] === value) {
+  if (array[i] === value) {
       return true;
     }
-  }
+
+  else{
   return false;
 }
+}
+}
 let myNumbers = [1, 3, 100, 4, 56, 89];
-console.log(' The value is:', find(myNumbers, 100));
+console.log(' The value is:', find(myNumbers, 3));
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
+
+
 function isFirstLetter(letter, string) {
   for (let i = 0; i < string.length; i++) {
-    if (letter[i] === string) {
+  
+    if (letter[i] === string[0]) {
       return true;
     }
     else {
@@ -107,22 +113,34 @@ function isFirstLetter(letter, string) {
     }
   }
 }
-
+console.log('Is the letter the first letter in the string?', isFirstLetter('F','Fargo'));
 // 9. Function to return the sum of all numbers in an array
-function sumAll(array) {
+
+
+function sumAll(myNumbers) {
+  myNumbers = [1, 3, 100, 4, 56, 89];
+  for(let i = 0; i = myNumbers.length; i++) {
+    return [1 + 3 + 100 + 4 + 56 + 89];
+  }
+  
 
   // TODO: loop to add items
 
   // TODO: return the sum
 }
-
+console.log( 'The sum of all numbers is :', sumAll(myNumbers[1, 3, 100, 4, 56, 89]));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+let newNumbers = [0.5, 10, 9, 35, 0.10, 0.19];
+let newArray = [];
 function allPositive() {
-
+  for(let i = 0; i < newNumbers.length; i++){
+allPositive.push(newNumbers[i]);
+  }
+return newArray;
 }
-
+console.log( 'The positive numbers are:', allPositive[newNumbers]);
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
