@@ -82,19 +82,16 @@ console.log('The last item in the array is:', getLast(array));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(array, value) {
-  for (let i = 1; i < array.length; i++) {
-    console.log('array value at i', array[i]);
-  if (array[i] === value) {
+  for(i = 0; i <array.length; i++){
+    if(value == array[i]) {
       return true;
     }
-
-  else{
-  return false;
+    else{
+      return false;
+    }
+  }
 }
-}
-}
-let myNumbers = [1, 3, 100, 4, 56, 89];
-console.log(' The value is:', find(myNumbers, 3));
+console.log('The value is found',find(array,value));
 // ----------------------
 // Stretch Goals
 // ----------------------
@@ -114,26 +111,20 @@ function isFirstLetter(letter, string) {
   }
 }
 console.log('Is the letter the first letter in the string?', isFirstLetter('F','Fargo'));
-// 9. Function to return the sum of all numbers in an array
 
 
 function sumAll(myNumbers) {
-  myNumbers = [1, 3, 100, 4, 56, 89];
+  const result = [1, 3, 100, 4, 56, 89];
   for(let i = 0; i = myNumbers.length; i++) {
-    return [1 + 3 + 100 + 4 + 56 + 89];
+    return (1 + 3 + 100 + 4 + 56 + 89);
   }
-  
-
-  // TODO: loop to add items
-
-  // TODO: return the sum
 }
-console.log( 'The sum of all numbers is :', sumAll(myNumbers[1, 3, 100, 4, 56, 89]));
+console.log( 'The sum of all numbers is :', sumAll(myNumbers));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 let newNumbers = [0.5, 10, 9, 35, 0.10, 0.19];
-let newArray = [];
+const newArray = [];
 function allPositive() {
   for(let i = 0; i < newNumbers.length; i++){
 allPositive.push(newNumbers[i]);
