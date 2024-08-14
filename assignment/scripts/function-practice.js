@@ -74,16 +74,16 @@ console.log("The last item in the array is:", getLast(array));
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find(array, value) {
-  for (i = 0; i < array.length; i++) {
-    if (value == array[i]) {
+function find(value, array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
       return true;
-    } else {
-      return false;
+    }  
+      
     }
+    return false;
   }
-}
-console.log("The value is found", find(array, value));
+console.log("The value is found", find('pen', array));
 // ----------------------
 // Stretch Goals
 // ----------------------
@@ -92,37 +92,42 @@ console.log("The value is found", find(array, value));
 
 function isFirstLetter(letter, string) {
   for (let i = 0; i < string.length; i++) {
-    if (letter[i] === string[0]) {
+    if (letter === string[0]) {
       return true;
-    } else {
-      return false;
-    }
+    } 
+    
+    return false;
   }
 }
-console.log(
-  "Is the letter the first letter in the string?",
-  isFirstLetter("F", "Fargo")
-);
+console.log( 'Is the letter the first letter in the string?', isFirstLetter('F', 'Fargo'));
 
-function sumAll(myNumbers) {
-  const result = [1, 3, 100, 4, 56, 89];
-  for (let i = 0; (i = myNumbers.length); i++) {
-    return 1 + 3 + 100 + 4 + 56 + 89;
+
+const result = [1, 3, 100, 4, 56, 89];
+let totalResult = [1 + 3 + 100 + 4 + 56 + 89];
+function sumAll(totalResult) {
+
+  for (let i = 0; i < result.length; i++) {
+   totalResult += result[i];
   }
 }
-console.log("The sum of all numbers is :", sumAll(myNumbers));
+console.log('The sum of all numbers is :', totalResult);
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-let newNumbers = [0.5, 10, 9, 35, 0.1, 0.19];
-const newArray = [];
-function allPositive() {
-  for (let i = 0; i < newNumbers.length; i++) {
-    allPositive.push(newNumbers[i]);
+let allNumbers = [1, 3, 0, 100, -1, 4, 56,-27, 89,-11];
+let num = 0;
+let positiveNumbers = [];
+
+function allPositive() { 
+for (let i = 0; i < allNumbers.length; i++) {
+  if (allNumbers[i] > num) {
+      positiveNumbers.push(allNumbers[i])
   }
-  return newArray;
 }
-console.log("The positive numbers are:", allPositive[newNumbers]);
+return positiveNumbers;
+}
+
+console.log("The positive numbers are:", positiveNumbers);
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
