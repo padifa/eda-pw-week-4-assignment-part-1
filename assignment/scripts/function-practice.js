@@ -110,7 +110,7 @@ function sumAll(totalResult) {
    totalResult += result[i];
   }
 }
-console.log('The sum of all numbers is :', [1 + 3 + 100 + 4 + 56 + 89]);
+console.log('The sum of all numbers is :', (1 + 3 + 100 + 4 + 56 + 89));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
@@ -127,7 +127,7 @@ for (let i = 0; i < allNumbers.length; i++) {
 return positiveNumbers;
 }
 
-console.log("The positive numbers are:", positiveNumbers);
+console.log("The positive numbers are:", allPositive(positiveNumbers));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
