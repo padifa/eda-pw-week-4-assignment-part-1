@@ -110,7 +110,7 @@ function sumAll(totalResult) {
    totalResult += result[i];
   }
 }
-console.log('The sum of all numbers is :', totalResult);
+console.log('The sum of all numbers is :', [1 + 3 + 100 + 4 + 56 + 89]);
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
