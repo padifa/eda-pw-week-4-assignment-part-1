@@ -78,12 +78,11 @@ function find(value, array) {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === value) {
       return true;
-    }  
-      
     }
-    return false;
   }
-console.log("The value is found", find('pen', array));
+  return false;
+}
+console.log("The value is found", find("pen", array));
 // ----------------------
 // Stretch Goals
 // ----------------------
@@ -94,37 +93,38 @@ function isFirstLetter(letter, string) {
   for (let i = 0; i < string.length; i++) {
     if (letter === string[0]) {
       return true;
-    } 
-    
+    }
+
     return false;
   }
 }
-console.log( 'Is the letter the first letter in the string?', isFirstLetter('F', 'Fargo'));
-
+console.log(
+  "Is the letter the first letter in the string?",
+  isFirstLetter("F", "Fargo")
+);
 
 const result = [1, 3, 100, 4, 56, 89];
 let totalResult = [1 + 3 + 100 + 4 + 56 + 89];
 function sumAll(totalResult) {
-
   for (let i = 0; i < result.length; i++) {
-   totalResult += result[i];
+    totalResult += result[i];
   }
 }
-console.log('The sum of all numbers is :', (1 + 3 + 100 + 4 + 56 + 89));
+console.log("The sum of all numbers is :", 1 + 3 + 100 + 4 + 56 + 89);
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-let allNumbers = [1, 3, 0, 100, -1, 4, 56,-27, 89,-11];
+let allNumbers = [1, 3, 0, 100, -1, 4, 56, -27, 89, -11];
 let num = 0;
 let positiveNumbers = [];
 
-function allPositive() { 
-for (let i = 0; i < allNumbers.length; i++) {
-  if (allNumbers[i] > num) {
-      positiveNumbers.push(allNumbers[i])
+function allPositive() {
+  for (let i = 0; i < allNumbers.length; i++) {
+    if (allNumbers[i] > num) {
+      positiveNumbers.push(allNumbers[i]);
+    }
   }
-}
-return positiveNumbers;
+  return positiveNumbers;
 }
 
 console.log("The positive numbers are:", allPositive(positiveNumbers));
